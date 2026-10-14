@@ -1,187 +1,158 @@
 # Awesome-Decentralized-Global-Agent-Banking-Platforms
 
-## Top Decentralized Global Agent Banking Platforms Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Agent Identity, Scoped Spend Authorization & Stablecoin Settlement*  
-
-**Last updated: March 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Decentralized Global Agent Banking**. These tools enable autonomous AI agents to hold identity, receive funds, spend within policy-defined boundaries, and settle transactions across fiat and crypto rails—without exposing permanent payment credentials.
-
-
-
-**Examples** include Skyfire Systems, Sphere, Helio (MoonPay Commerce), Rain Cards, Crossmint, Conduit, BVNK, Bridge (Stripe), Lightspark, and Meso (the category leaders).
-
-
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, scoped spend governance, and open payment rails—ideal for agent developers, fintech engineers, and platforms seeking transparent, vendor-independent agent banking infrastructure.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Skyfire Systems](https://skyfire.xyz/)**  
-
-  Verified identity and payment credentials for agents across the open internet. Three token types: **kya** (Know Your Agent—proves identity), **pay** (authorizes payment to a seller), and **kya-pay** (identity and payment combined). Tokens are JWTs conforming to the open **KYAPay protocol**—an industry specification for identity-linked payment credentials purpose-built for autonomous systems. Every interaction follows four steps: Present, Verify, Deliver, Settle .
-
-
-
-- **[Sphere (Unicity)](https://sphere.xyz/)**  
-
-  Autonomous economic agent SDK providing identity, wallet, and ability to find, negotiate with, and settle with other agents—peer-to-peer, with perfect privacy and ultra-fast finality. SDK available for Node.js with multi-wallet support, Nostr relay transport, and wallet API providers. A community MCP server (`@purplesquirrel/sphere-mcp`) exposes 13 tools covering stablecoin contractor payouts, treasury sweeps, on-ramp/off-ramp virtual accounts, customer onboarding, KYC, and webhooks .
-
-
-
-- **[Helio (MoonPay Commerce)](https://hel.io/)**  
-
-  Agent-payable checkout and deposit platform for merchants. Agents settle payments on-chain in **mainnet USDC** via **x402** (HTTP 402-based payment protocol)—no human checkout required. Merchant integration unchanged: paylinks, charges, deposits, and webhooks work identically for agent and human payers. Per-payer deposit wallets pre-allocated; rate limits 10 requests/60s per payer IP. Audited by Ackee Blockchain; non-custodial—funds never held by Helio .
-
-
-
-- **[Rain Cards](https://www.rain.xyz/)**  
-
-  Scoped virtual card infrastructure for programmable payments. Cards created in **milliseconds** against defined spend parameters and **auto-retired** after intended use. **Agent Control Layer** (beta) enforces controls at card issuance and transfer initiation—not after the fact. Agent-level controls: transaction amounts, merchant/category allowlists, spend intervals, card expiry. Program-level controls: caps on active cards, aggregate spend limits. Sponge (YC-backed) issues agent-usable cards funded by stablecoin balance, transacting anywhere Visa is accepted online across **175M+ merchant locations** .
-
-
-
-- **[Crossmint](https://www.crossmint.com/)**  
-
-  Payment infrastructure for AI agents with three composable products: **Agent Cards** (one-time or encrypted credentials—real card never exposed, PCI scope stays with Crossmint, limits enforced at Visa/Mastercard), **Agent Wallets** (non-custodial smart wallets for x402, MPP, and onchain actions—spend cap, allowed counterparties, time window enforced onchain), and **Agent Checkouts** (accept payments from agentic commerce protocols or optimized browser). User stays in control; every allowance scoped, explicit, revocable .
-
-
-
-- **[Conduit](https://conduit.financial/)**  
-
-  Banking infrastructure for AI customer service and agent operations. **Clients** (business entities/subsidiaries) get named **Virtual Accounts** for true banking-like functionality—hold USD balances, send/receive payments, manage multiple entities independently. Onboarding 1-3 business days. API for client balances, deposit instructions, and payment execution. While positioned for AI customer service, the virtual account architecture provides the banking layer for agent-initiated corporate payments .
-
-
-
-- **[BVNK](https://bvnk.com/)**  
-
-  Enterprise stablecoin payments infrastructure bridging banks and blockchains. **Embedded Wallets** (launched March 2025) unify fiat and stablecoins in a single platform—Swift, SEPA, ACH, and blockchains. 25+ licenses and regulatory approvals, ISO 27001 and SOC 2 Type II certified, 99.9% uptime. 130+ countries supported for onboarding. Send, receive, convert, store, and embed wallets in your brand .
-
-
-
-- **[Bridge (Stripe)](https://bridge.xyz/)**  
-
-  Stablecoin infrastructure platform acquired by Stripe. Integration with XDC Tech enables autonomous AI agents to access **fiat payments, securely hold stablecoins, and execute cross-border financial services through a fully regulated pipeline**. **Virtual accounts** assign dedicated ACH or IBAN endpoints to AI systems—agents receive fiat, settle as stablecoins, convert back to fiat. Bridge manages KYC, KYB, sanctions screening, and regulated asset custody. XDC Tech processes 2,000+ transactions per second with two-second finality .
-
-
-
-- **[Lightspark (Grid Global Accounts)](https://www.lightspark.com/)**  
-
-  Global financial accounts with native AI agent support. Users create **scoped, revocable, auditable operating pockets** for agents—spending limits, approved payees, approval thresholds defined by user. Grid evaluates policy **before any agent-initiated action executes**. Permissions granular: view balances, send payments, create external accounts, execute withdrawals—each explicitly allowed/denied. Connection flows: CLI install, MCP with OAuth, or agent-initiated device flow. Real-time revocation; every action fully traceable .
-
-
-
-- **[Meso](https://meso.network/)**  
-
-  Developer-focused platform bridging traditional banking and card payments with crypto applications. Stablecoin and crypto APIs supporting ETH, SOL, MATIC, ARB, OP, BASE, and BTC. Built-in tools for KYC, AML, and fraud prevention. Instant transfers between banks and crypto wallets. Global coverage: US and Europe .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[PayGraph](https://pypi.org/project/paygraph/)**  
-
-  **Open-source spend governance for AI agents**—the most directly applicable open-source agent banking layer available. Issue **single-use virtual cards** or pay **x402-enabled APIs with USDC**—with policy enforcement, audit logging, and human-in-the-loop approval. Policy engine enforces `max_transaction`, `daily_budget`, `blocked_vendors`, and custom rules. Gateways: **StripeCardGateway** (real virtual cards), **StripeMPPGateway** (scoped Shared Payment Tokens for Stripe machine payments), **X402Gateway** (EVM + Solana USDC payments). Framework integrations: LangGraph, CrewAI, or any agent framework. `pip install paygraph` .
-
-
-
-- **[sphere-sdk](https://github.com/unicity-sphere/sphere-sdk)**  
-
-  SDK for autonomous economic agents—give an agent an identity, a wallet, and the ability to find, negotiate with, and settle with other agents. Peer-to-peer, with perfect privacy and ultra-fast finality. Node.js implementation with multi-wallet support (each wallet file under one `dataDir`), Nostr relay transport for decentralized communication, wallet API providers, and oracle trust base configuration. `npm install @unicitylabs/sphere-sdk` .
-
-
-
-- **[sphere-mcp](https://www.npmjs.com/package/@purplesquirrel/sphere-mcp)**  
-
-  MCP server for Sphere Pay—**13 tools** covering stablecoin contractor payouts, treasury sweeps, on-ramp/off-ramp virtual accounts, customer onboarding, KYC, and webhooks. Designed primarily for contractor stablecoin payouts + treasury sweep (USDC → fiat bank, wallet → wallet). Any MCP-compatible AI agent (Claude Code, Cursor, ChatGPT) gets native access to Sphere's full payments stack. Webhook signature verification (HMAC-SHA256) included .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **x402 Protocol** — HTTP 402-based payment protocol for machine-to-machine payments. Emerging standard for agent-paid APIs. Integrated in PayGraph, Crossmint, Helio, and Sphere. Open specification .
-
-- **KYAPay Protocol** — Open industry specification for identity-linked payment credentials purpose-built for autonomous systems. Standardizes how identity and value are packaged and transmitted across agents, services, and platforms .
-
-- Community **n8n** workflows for agent spend alerting and policy violation routing.
-
-
-
-**Frameworks for building custom systems**: Combine **PayGraph** for scoped spend governance with **sphere-sdk** for agent identity and wallet management, **sphere-mcp** for MCP-native payments, and **x402** for machine-to-machine API payments—creating a fully self-hosted, enterprise-grade agent banking platform.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Agent banking platforms handling financial transactions must comply with payment regulations (PSD2, SOC 2, AML/KYC requirements, money transmission laws) and applicable financial services law.
-
-- **Open-source agent banking is emerging, not mature.** PayGraph provides scoped spend governance with Stripe and x402 gateways . sphere-sdk provides agent identity and wallet primitives . **No open-source project provides the full regulated banking stack of Bridge, BVNK, or Lightspark.** Integration with regulated partners is required for production deployment.
-
-- **Scoped spend authorization is the core primitive.** Skyfire (kya/pay/kya-pay tokens), Rain (scoped cards), Crossmint (Agent Cards/Wallets), and Lightspark (operating pockets) all enforce policy before money moves. PayGraph implements the same pattern open-source: `SpendPolicy(max_transaction, daily_budget, blocked_vendors)` . Never deploy agent spend without deterministic policy enforcement.
-
-- **Stablecoin settlement is the common denominator.** Helio (USDC via x402), Crossmint (USDC), Bridge (USDC), and Sphere (USDC) all settle in stablecoins. This provides 24/7/365 settlement without correspondent banking delays—critical for autonomous agents operating continuously.
-
-- Self-hosted open-source solutions require proper security hardening, key management, and ongoing maintenance. Agent banking infrastructure is financially critical—audit trails and revocation mechanisms are essential.
-
-
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Tracked Topics](https://img.shields.io/badge/Topics-AI--Agents%20%7C%20Agentic--Banking%20%7C%20Stablecoins%20%7C%20Fintech-blue)](#)
+
+> A curated list of decentralized global agent banking platforms, scoped spend authorization protocols, autonomous AI wallet infrastructure, and stablecoin settlement rails.
 
 ---
 
+## Top Decentralized Global Agent Banking Platforms Ecosystem
 
+**Curated List of SaaS Products & Open-Source GitHub Projects**  
+*Focused on Agent Identity, Scoped Spend Authorization & Stablecoin Settlement*  
+**Last updated: March 2026**
 
-**Made for agent developers, fintech engineers, and platform teams building transparent autonomous banking infrastructure.**
+This repository tracks notable **SaaS platforms** and **open-source projects** for **Decentralized Global Agent Banking** and **Agentic Commerce**. These tools enable autonomous AI agents to hold verifiable identities, receive programmable funds, spend within strict policy-defined boundaries, and settle transactions across fiat and crypto rails—without exposing permanent payment credentials or private keys.
 
-Let's make Decentralized Global Agent Banking more open, policy-governed, and verifiable.
+**Core architectural pillars:**
+- **Agent Identity & Authentication:** Cryptographic agent credentials, KYA (Know Your Agent), and machine-to-machine delegation tokens.
+- **Scoped Spend Governance:** Deterministic pre-execution policy enforcement (per-transaction caps, daily budgets, vendor allowlists, human-in-the-loop triggers).
+- **Stablecoin & Multi-Rail Settlement:** Sub-second 24/7/365 liquidity settlement via USDC/USDT on Base, Solana, Ethereum, and Lightning/fiat virtual accounts.
+
+Contributions welcome! Open a PR to add or update entries.
+
+---
+
+## Table of Contents
+
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS & Hosted Platforms](#saas--hosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+- [Emerging Protocols & Standards](#emerging-protocols--standards)
+- [Architecture & Implementation Blueprint](#architecture--implementation-blueprint)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer](#disclaimer)
+
+---
+
+## Sector Overview & Market Dynamics
+
+The global AI agent market is valued at approximately **$7.8B–$8.0B** and projected to exceed **$50B by 2030**, while agentic commerce and autonomous machine-to-machine transaction spend are estimated to scale between **$1.5T and $3.0T+** globally by 2030.
+
+The sector exhibits a **bifurcated market structure**:
+- **Core Infrastructure Layer (Consolidated / Oligopolistic):** Foundational settlement networks and licensed compliance rails are rapidly concentrating around global payment giants and infrastructure unicorns (Stripe/Bridge, Mastercard/BVNK, Visa, and Circle), where regulatory moats, principal card memberships, and fiat-clearing pipelines create natural winner-take-most dynamics.
+- **Agent Orchestration & Protocol Edge (Moderately to Highly Fragmented):** Application-specific tooling, open spend-governance engines, prompt-level checkout adapters, and autonomous wallet SDKs remain highly fragmented across specialized frameworks, decentralized protocols (x402, KYAPay, ERC-7710/4337), and developer ecosystems.
+
+---
+
+## SaaS & Hosted Platforms
+
+| Platform | Company Valuation / Scale | Pricing | Free Tier / Trial Limits | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Rain Cards](https://www.rain.xyz/)** | $1.95B Valuation (Jan 2026, Series C; $338M raised; $3B+ annualized volume) | Interchange revenue share on Visa card spend + platform fee tiers; 0% APR, up to 3% FX | Free sandbox developer testing environment with pre-allocated test credits | Scoped virtual card issuance infrastructure for autonomous AI agents. Creates ephemeral virtual cards in milliseconds against strict spend constraints, automatically retiring cards post-transaction. |
+| **[BVNK](https://bvnk.com/)** | $1.8B Valuation (Acquired by Mastercard Mar 2026; $90M+ raised; $40M+ ARR) | Volume-tiered enterprise rates; pass-through network gas fees + consolidated FX/crypto conversion spread | Sandbox developer environment with free API test credentials and mock multi-currency settlement | Enterprise stablecoin payments infrastructure bridging fiat banks and blockchains. Embedded Wallets unify SEPA, SWIFT, ACH, and crypto rails across 130+ countries with ISO 27001 & SOC 2 certifications. |
+| **[Bridge (Stripe)](https://bridge.xyz/)** | $1.1B Valuation (Acquired by Stripe Feb 2025; $58M+ raised) | Pay-as-you-go; developer fee markup config + network gas passed at cost + up to 1.0% FX conversion spread | Full sandbox testnet access with unlimited mock fiat virtual accounts and test stablecoin minting | Stablecoin infrastructure platform acquired by Stripe. Provides AI agents with dedicated ACH/IBAN virtual account endpoints, auto-converting fiat to stablecoins and settling cross-border over 2,000 TPS. |
+| **[Lightspark](https://www.lightspark.com/)** | ~$1.0B Valuation ($175M raised; backed by a16z & Paradigm; ~$12.8M est. revenue) | Starter tier: $0 platform fee + transaction usage fees; platform revenue sharing (~0.20%–1.0% card swipe share, 100–200 bps FX) | 30-day free trial on platform service tiers + free perpetual Starter tier access | Global financial accounts with native AI agent support (Grid Global Accounts). Grants agents scoped, revocable, auditable operating pockets with granular permission gates prior to action execution. |
+| **[Helio (MoonPay Commerce)](https://hel.io/)** | $175M Valuation (Acquired by MoonPay Jan 2025; parent valued at $3.4B) | Standard tier: 2.0% per transaction; HelioX tier: 1.0% per transaction; 0.25% swap fee, 0.50% offramp fee | Free forever plan with no monthly subscription fees; unlimited payment link generation (pay-per-tx on live transactions) | Agent-payable checkout and deposit gateway. Agents settle payments on-chain in mainnet USDC via the x402 HTTP standard with pre-allocated per-payer deposit wallets and rate-limited endpoints. |
+| **[Conduit](https://conduit.financial/)** | $53M Total Funding (Series A led by Dragonfly & Altos Ventures; backed by Paradigm) | Volume-tiered transaction pricing based on corridor; custom take-rates per transaction and virtual account | Sandbox environment with full API access and mock multi-currency balances for developer testing | Cross-border payments and multicurrency virtual account infrastructure. AI systems and client subsidiaries receive named virtual accounts to hold USD balances, deposit, and execute corporate payments. |
+| **[Crossmint](https://www.crossmint.com/)** | $23.6M Total Funding (Series A led by Ribbit Capital; 40,000+ developers) | Pay-as-you-go starting at $0.025–$0.05 per active wallet overage; tokenization actions starting at $0.01/action | Free forever Developer tier: 1,000 free Monthly Active Wallets (MAU) and up to 2,000 transactions/month | Tri-part payment infrastructure for AI agents: Agent Cards (one-time or encrypted PCI-compliant cards), Agent Wallets (non-custodial smart accounts), and Agent Checkouts via x402 and MPP. |
+| **[Skyfire Systems](https://skyfire.xyz/)** | $14.5M Total Funding (Seed rounds backed by a16z CSX, Neuberger Berman, Brevan Howard, Circle) | Volume-based platform fees; merchant-side settlement processing in USDC without chargebacks | Developer portal access with pre-funded developer test credits for agent integration and verification | Verified identity and payment credential network for agents. Employs KYA (Know Your Agent) tokens and KYAPay JWT credentials conforming to open industry specifications across Present, Verify, Deliver, and Settle stages. |
+| **[Meso](https://meso.network/)** | $9.5M Seed Funding (Acquired by MoonPay Sep 2025; backed by Solana Ventures & Ribbit) | Native transaction-based on-ramp and off-ramp fees integrated into checkout APIs | Free developer sandbox environment with test bank credentials and testnet token faucet support | Fast payment orchestration bridging traditional bank rails and debit cards directly to self-custodial agent wallets, handling automated KYC, AML, and fraud prevention across US and European corridors. |
+| **[Sphere (Unicity)](https://sphere.xyz/)** | $3.0M Seed Funding (Feb 2026, led by Blockchange Ventures, Tawasal, Outlier) | Decentralized protocol network fees + custom facilitator routing fees on settled payouts | Free forever open SDK integration with local wallet generation and free Nostr relay transport | Autonomous economic agent platform enabling peer-to-peer agent discovery, cryptographic identity, and direct off-chain/on-chain contract settlement with ultra-fast finality. |
+
+---
+
+## Open-Source GitHub Projects
+
+Curated open-source agent banking engines, smart wallet controllers, spend policy gates, and machine payment toolkits—ranked by GitHub community stargazers.
+
+- **[elizaOS / eliza](https://github.com/elizaOS/eliza)** [![GitHub stars](https://img.shields.io/github/stars/elizaOS/eliza?style=social&color=white)](https://github.com/elizaOS/eliza/stargazers)  
+  Autonomous multi-agent operating system and framework. Features native wallet management, DeFi transaction execution, multi-chain signing, and plugin adapters for autonomous banking and financial actions across EVM, Solana, and Cosmos.
+
+- **[x402 Foundation / x402](https://github.com/x402-foundation/x402)** [![GitHub stars](https://img.shields.io/github/stars/x402-foundation/x402?style=social&color=white)](https://github.com/x402-foundation/x402/stargazers)  
+  The open HTTP 402 Payment Required standard for the internet. Enables autonomous agents to pay for web APIs, microservices, and compute on the fly using stablecoins (USDC) with zero human intervention.
+
+- **[unicity-sphere / sphere-sdk](https://github.com/unicity-sphere/sphere-sdk)** [![GitHub stars](https://img.shields.io/github/stars/unicity-sphere/sphere-sdk?style=social&color=white)](https://github.com/unicity-sphere/sphere-sdk/stargazers)  
+  SDK for autonomous economic agents. Equips AI agents with verifiable decentralized identity, embedded wallets, and peer-to-peer negotiation/settlement capabilities via Nostr relays and cryptographic trust oracles. `npm install @unicitylabs/sphere-sdk`.
+
+- **[safe-fndn / safe-smart-account](https://github.com/safe-fndn/safe-smart-account)** [![GitHub stars](https://img.shields.io/github/stars/safe-fndn/safe-smart-account?style=social&color=white)](https://github.com/safe-fndn/safe-smart-account/stargazers)  
+  Industry-standard smart contract account (formerly Gnosis Safe) powering institutional and agentic treasury custody. Provides programmable multi-signature authorization, spending limit modules, and ERC-4337 compatibility for non-custodial agent treasury management.
+
+- **[coinbase / agentkit](https://github.com/coinbase/agentkit)** [![GitHub stars](https://img.shields.io/github/stars/coinbase/agentkit?style=social&color=white)](https://github.com/coinbase/agentkit/stargazers)  
+  Turnkey framework giving every AI agent an onchain wallet. Compatible with any AI agent framework (LangChain, CrewAI, AutoGen) to execute transfers, mint tokens, interact with DeFi protocols, and manage balances on Base, Ethereum, and Solana.
+
+- **[coinbase / x402](https://github.com/coinbase/x402)** [![GitHub stars](https://img.shields.io/github/stars/coinbase/x402?style=social&color=white)](https://github.com/coinbase/x402/stargazers)  
+  Coinbase's implementation and client tools for the HTTP 402 payment protocol. Facilitates machine-to-machine micropayments and automated agent payment flows on EVM-compatible chains.
+
+- **[valory-xyz / open-autonomy](https://github.com/valory-xyz/open-autonomy)** [![GitHub stars](https://img.shields.io/github/stars/valory-xyz/open-autonomy?style=social&color=white)](https://github.com/valory-xyz/open-autonomy/stargazers)  
+  Framework for building decentralized autonomous service networks and co-owned multi-agent economies. Enables off-chain multi-agent services to reach consensus and trigger on-chain transactions via Safe smart accounts.
+
+- **[paygraph-ai / paygraph](https://github.com/paygraph-ai/paygraph)** [![GitHub stars](https://img.shields.io/github/stars/paygraph-ai/paygraph?style=social&color=white)](https://github.com/paygraph-ai/paygraph/stargazers)  
+  Open-source spend governance engine for AI agents. Issues single-use virtual cards or pays x402-enabled APIs with USDC under strict spending policy constraints (`max_transaction`, `daily_budget`, `blocked_vendors`, human approval triggers). Gateways include StripeCardGateway, StripeMPPGateway, and X402Gateway. `pip install paygraph`.
+
+- **[nevermined-io / payments](https://github.com/nevermined-io/payments)** [![GitHub stars](https://img.shields.io/github/stars/nevermined-io/payments?style=social&color=white)](https://github.com/nevermined-io/payments/stargazers)  
+  TypeScript and Python libraries for the Nevermined Payments Protocol. Empowers autonomous agents and developers to monetize AI inference, web services, and agent-to-agent interactions via smart contracts and automated payment channels.
+
+- **[skyfire-xyz / kyapay](https://github.com/skyfire-xyz/kyapay)** [![GitHub stars](https://img.shields.io/github/stars/skyfire-xyz/kyapay?style=social&color=white)](https://github.com/skyfire-xyz/kyapay/stargazers)  
+  Official reference implementation of the KYAPay (Know Your Agent) protocol. Standardizes identity-linked payment JWT tokens (`kya`, `pay`, `kya-pay`) to verify autonomous agent credentials before executing transactions.
+
+---
+
+## Emerging Protocols & Standards
+
+- **[x402 Protocol](https://x402.org/)**: HTTP 402 standard specifying how web servers can request payment from machine clients and how agents can pay and verify access tokens programmatically.
+- **[KYAPay Protocol](https://kyapay.org/)**: Open industry specification linking verifiable agent identity (KYA) with scoped payment authorizations.
+- **[ERC-7710 & ERC-4337 Delegation](https://eips.ethereum.org/)**: Account abstraction standards enabling smart contract wallets to grant delegated, parameter-bounded transaction execution permissions to autonomous AI agents.
+- **[Model Context Protocol (MCP) Payment Extensions](https://modelcontextprotocol.io/)**: MCP tool extensions enabling LLM agents (Claude Code, Cursor, Codex) to invoke payment tools and query balances in real time (e.g. `@purplesquirrel/sphere-mcp`).
+
+---
+
+## Architecture & Implementation Blueprint
+
+```
++-------------------------------------------------------------+
+|                      Autonomous AI Agent                     |
+|            (LangChain, CrewAI, ElizaOS, Claude Code)        |
++------------------------------+------------------------------+
+                               |
+                               v
++-------------------------------------------------------------+
+|               Scoped Spend Governance Layer                 |
+|             (PayGraph / Lightspark Pockets)                 |
+|  - Max per-transaction limit      - Daily / monthly budget  |
+|  - Merchant category allowlist    - Multi-sig human approval|
++---------------+-----------------------------+---------------+
+                |                             |
+                v                             v
++-------------------------------+ +---------------------------+
+|    Virtual Card / Fiat Rails  | |   Onchain / x402 Rails    |
+|   (Rain Cards, Crossmint,     | | (USDC, AgentKit, Safe,    |
+|    Bridge Virtual Accounts)   | |  Sphere SDK, Nevermined)  |
++---------------+---------------+ +-------------+-------------+
+                |                               |
+                v                               v
++-------------------------------+ +---------------------------+
+| Traditional Merchants / APIs  | | Web3 Protocols / AI Nodes |
++-------------------------------+ +---------------------------+
+```
+
+---
+
+## How to Contribute
+
+1. Fork this repository.
+2. Add your SaaS product or open-source GitHub project.
+   - For **SaaS products**: Include name, link, company valuation/funding, starting tier pricing, free tier/trial limits, and a concise summary.
+   - For **Open-source projects**: Provide GitHub repository link, description, and verify active maintenance.
+3. Keep descriptions factual, unbiased, and reference official documentation.
+4. Submit a Pull Request with a clear title and summary.
+
+---
+
+## Disclaimer
+
+- This repository is a **community-curated index** provided for educational and architectural reference purposes only.
+- Autonomous agent banking and financial operations are subject to financial regulations, including money transmission licensing, anti-money laundering (AML), Know Your Customer/Agent (KYC/KYA), PSD2/PSD3, and SOC 2 requirements.
+- Never grant an autonomous AI agent unlimited or unmonitored financial spending privileges. Always implement deterministic spend policies, hard financial ceilings, and multi-signature human-in-the-loop fallback mechanisms.
