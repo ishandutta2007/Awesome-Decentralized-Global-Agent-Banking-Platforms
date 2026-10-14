@@ -86,34 +86,34 @@ The sector exhibits a **bifurcated market structure**:
 
 Curated open-source agent banking engines, smart wallet controllers, spend policy gates, and machine payment toolkits—ranked by GitHub community stargazers.
 
-- **[elizaOS / eliza](https://github.com/elizaOS/eliza)** [![GitHub stars](https://img.shields.io/github/stars/elizaOS/eliza?style=social&color=white)](https://github.com/elizaOS/eliza/stargazers)  
+- **[elizaOS / eliza](https://github.com/elizaOS/eliza)** [![GitHub_Stars](https://img.shields.io/github/stars/elizaOS/eliza?style=social&color=white)](https://github.com/elizaOS/eliza/stargazers)  
   🤖 Autonomous multi-agent operating system and framework. Features native wallet management, DeFi transaction execution, multi-chain signing, and plugin adapters for autonomous banking and financial actions across EVM, Solana, and Cosmos.
 
-- **[x402 Foundation / x402](https://github.com/x402-foundation/x402)** [![GitHub stars](https://img.shields.io/github/stars/x402-foundation/x402?style=social&color=white)](https://github.com/x402-foundation/x402/stargazers)  
+- **[x402 Foundation / x402](https://github.com/x402-foundation/x402)** [![GitHub_Stars](https://img.shields.io/github/stars/x402-foundation/x402?style=social&color=white)](https://github.com/x402-foundation/x402/stargazers)  
   ⚡ The open HTTP 402 Payment Required standard for the internet. Enables autonomous agents to pay for web APIs, microservices, and compute on the fly using stablecoins (USDC) with zero human intervention.
 
-- **[unicity-sphere / sphere-sdk](https://github.com/unicity-sphere/sphere-sdk)** [![GitHub stars](https://img.shields.io/github/stars/unicity-sphere/sphere-sdk?style=social&color=white)](https://github.com/unicity-sphere/sphere-sdk/stargazers)  
+- **[unicity-sphere / sphere-sdk](https://github.com/unicity-sphere/sphere-sdk)** [![GitHub_Stars](https://img.shields.io/github/stars/unicity-sphere/sphere-sdk?style=social&color=white)](https://github.com/unicity-sphere/sphere-sdk/stargazers)  
   🌐 SDK for autonomous economic agents. Equips AI agents with verifiable decentralized identity, embedded wallets, and peer-to-peer negotiation/settlement capabilities via Nostr relays and cryptographic trust oracles. `npm install @unicitylabs/sphere-sdk`.
 
-- **[safe-fndn / safe-smart-account](https://github.com/safe-fndn/safe-smart-account)** [![GitHub stars](https://img.shields.io/github/stars/safe-fndn/safe-smart-account?style=social&color=white)](https://github.com/safe-fndn/safe-smart-account/stargazers)  
+- **[safe-fndn / safe-smart-account](https://github.com/safe-fndn/safe-smart-account)** [![GitHub_Stars](https://img.shields.io/github/stars/safe-fndn/safe-smart-account?style=social&color=white)](https://github.com/safe-fndn/safe-smart-account/stargazers)  
   🔐 Industry-standard smart contract account (formerly Gnosis Safe) powering institutional and agentic treasury custody. Provides programmable multi-signature authorization, spending limit modules, and ERC-4337 compatibility for non-custodial agent treasury management.
 
-- **[coinbase / agentkit](https://github.com/coinbase/agentkit)** [![GitHub stars](https://img.shields.io/github/stars/coinbase/agentkit?style=social&color=white)](https://github.com/coinbase/agentkit/stargazers)  
+- **[coinbase / agentkit](https://github.com/coinbase/agentkit)** [![GitHub_Stars](https://img.shields.io/github/stars/coinbase/agentkit?style=social&color=white)](https://github.com/coinbase/agentkit/stargazers)  
   🧰 Turnkey framework giving every AI agent an onchain wallet. Compatible with any AI agent framework (LangChain, CrewAI, AutoGen) to execute transfers, mint tokens, interact with DeFi protocols, and manage balances on Base, Ethereum, and Solana.
 
-- **[coinbase / x402](https://github.com/coinbase/x402)** [![GitHub stars](https://img.shields.io/github/stars/coinbase/x402?style=social&color=white)](https://github.com/coinbase/x402/stargazers)  
+- **[coinbase / x402](https://github.com/coinbase/x402)** [![GitHub_Stars](https://img.shields.io/github/stars/coinbase/x402?style=social&color=white)](https://github.com/coinbase/x402/stargazers)  
   💳 Coinbase's implementation and client tools for the HTTP 402 payment protocol. Facilitates machine-to-machine micropayments and automated agent payment flows on EVM-compatible chains.
 
-- **[valory-xyz / open-autonomy](https://github.com/valory-xyz/open-autonomy)** [![GitHub stars](https://img.shields.io/github/stars/valory-xyz/open-autonomy?style=social&color=white)](https://github.com/valory-xyz/open-autonomy/stargazers)  
+- **[valory-xyz / open-autonomy](https://github.com/valory-xyz/open-autonomy)** [![GitHub_Stars](https://img.shields.io/github/stars/valory-xyz/open-autonomy?style=social&color=white)](https://github.com/valory-xyz/open-autonomy/stargazers)  
   🕸️ Framework for building decentralized autonomous service networks and co-owned multi-agent economies. Enables off-chain multi-agent services to reach consensus and trigger on-chain transactions via Safe smart accounts.
 
-- **[paygraph-ai / paygraph](https://github.com/paygraph-ai/paygraph)** [![GitHub stars](https://img.shields.io/github/stars/paygraph-ai/paygraph?style=social&color=white)](https://github.com/paygraph-ai/paygraph/stargazers)  
+- **[paygraph-ai / paygraph](https://github.com/paygraph-ai/paygraph)** [![GitHub_Stars](https://img.shields.io/github/stars/paygraph-ai/paygraph?style=social&color=white)](https://github.com/paygraph-ai/paygraph/stargazers)  
   🛡️ Open-source spend governance engine for AI agents. Issues single-use virtual cards or pays x402-enabled APIs with USDC under strict spending policy constraints (`max_transaction`, `daily_budget`, `blocked_vendors`, human approval triggers). Gateways include StripeCardGateway, StripeMPPGateway, and X402Gateway. `pip install paygraph`.
 
-- **[nevermined-io / payments](https://github.com/nevermined-io/payments)** [![GitHub stars](https://img.shields.io/github/stars/nevermined-io/payments?style=social&color=white)](https://github.com/nevermined-io/payments/stargazers)  
+- **[nevermined-io / payments](https://github.com/nevermined-io/payments)** [![GitHub_Stars](https://img.shields.io/github/stars/nevermined-io/payments?style=social&color=white)](https://github.com/nevermined-io/payments/stargazers)  
   💸 TypeScript and Python libraries for the Nevermined Payments Protocol. Empowers autonomous agents and developers to monetize AI inference, web services, and agent-to-agent interactions via smart contracts and automated payment channels.
 
-- **[skyfire-xyz / kyapay](https://github.com/skyfire-xyz/kyapay)** [![GitHub stars](https://img.shields.io/github/stars/skyfire-xyz/kyapay?style=social&color=white)](https://github.com/skyfire-xyz/kyapay/stargazers)  
+- **[skyfire-xyz / kyapay](https://github.com/skyfire-xyz/kyapay)** [![GitHub_Stars](https://img.shields.io/github/stars/skyfire-xyz/kyapay?style=social&color=white)](https://github.com/skyfire-xyz/kyapay/stargazers)  
   🎫 Official reference implementation of the KYAPay (Know Your Agent) protocol. Standardizes identity-linked payment JWT tokens (`kya`, `pay`, `kya-pay`) to verify autonomous agent credentials before executing transactions.
 
 ---
